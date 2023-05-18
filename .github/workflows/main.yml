@@ -18,9 +18,10 @@ jobs:
       - name: Build
         run: |
           chmod 700 mvnw
-          ./mvnw package
+          ./mvnw compile
         
   lint:
+    needs: compile
     name: Lint Code base
     runs-on: ubuntu-latest
 
