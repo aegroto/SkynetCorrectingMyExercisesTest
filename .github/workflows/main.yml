@@ -16,7 +16,9 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
       - name: Build
-        run: ./mvnw package
+        run: |
+          chmod 700 mvnw
+          ./mvnw package
         
   lint:
     name: Lint Code base
